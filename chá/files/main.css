@@ -1,0 +1,242 @@
+   
+   header {
+    background-color: #fff2c1;
+    color: #b89a1a;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    bottom: 100%;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff2c15c;
+    height: 100%;
+}
+
+h1{
+    font-family: 'Great Vibes';
+    font-size: 29px;
+   }
+
+h2{
+    font-family: 'Great Vibes';
+    font-size: 26px;
+}
+
+h3{
+    font-family: 'Great Vibes';
+    font-size: 200%;
+    color: #856d08;
+    margin: 0
+}
+
+#mensagem-inicial{
+    font-family: 'Great Vibes';
+    text-align: center;
+    font-size: 130%;
+    color: #856d08;
+    margin: 0;
+}   
+
+.gift-container {
+    max-width: 500px;
+    width: 90%;
+    height: 600px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-container{
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.gift-list{
+    width: 90%;
+    height: 75%;
+    border: solid 1px;
+    border-color: #856d08a1;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:#f3f3f3;
+    overflow: auto;
+    margin-top: 10px; 
+}
+
+
+.gift-item {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    background-color: #fff;
+    border: solid 1px rgba(134, 168, 219, 0.377);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.gift-link{
+    color: rgb(1, 117, 172);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+
+.image-box{
+    display: flex;
+    justify-content: center;
+        border-bottom: solid 1px rgb(221, 221, 221);
+}
+
+.info-box{
+    width: 100%;
+    margin: 10px;
+    color: #755e0b;
+}
+
+.button-box{
+    display: flex;
+    margin: 10px;
+}
+
+.gift-image {
+    max-width: 70%;
+    margin: 10px;
+    height: auto;
+}
+
+.gift-title{
+    display: block;
+    width: 90%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: medium;
+    font-weight:bold;
+}
+
+.confirm{
+    color: #ffffff;
+    background-color: #038d0a;
+    border: #038d0a;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 200ms;
+}
+
+.confirm:active{
+    color: #ffffff;
+    background-color: #17701c;
+    border: #17701c;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.overlay {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+    }
+
+.modal-input-group{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.group-input{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 10px
+}
+
+.required{
+    color: #d10000;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    z-index: 3;
+}
+
+.loadingGroup{
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  
+  .fadeOut {
+    animation: fadeOut 1s ease-in-out;
+  }
+
+  .fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+.msg-campo-invalido{
+    color: #d10000;
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+}
+
+.inputInvalido{
+    border: 1px solid red;
+}
+
+.modal-backdrop.show{
+    z-index: 0;
+}

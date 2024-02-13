@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de presentes convidados</title>
+    <link rel="stylesheet" href="./files/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Lista de Presentes - convidados</h1>
+        <h2>Hellen e Ryan</h2>
+    </header>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+        </symbol>
+        <symbol id="info-fill" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
+        </symbol>
+      </svg>
+
+    <div class="gift-container" id="giftContainer">
+
+        <div class="header-container">
+            <h3>Presentes disponíveis</h3>
+            <p id="mensagem-inicial">Quando um item for escolhido, ele sairá automaticamente da lista</p>
+        </div>
+
+        <div class="gift-list" id="giftlist"></div>
+
+    </div>
+
+    <div class="modal fade" id="modalReservar" tabindex="-1" aria-labelledby="meuModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" style="z-index: 1;">
+        <div class="modal-dialog modal-dialog-centered d-flex" style="z-index: 2;">
+            <div class="modal-content" style="z-index: 3;">
+            <div class="modal-header">
+              <h5 class="modal-title" id="meuModalLabel">Escolha de Presente</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- Conteúdo do seu modal aqui -->
+              <div class="modal-input-group">
+
+                <div class="group-input" name="nome">
+                    <label for="convidadoNome">Nome:</label>
+                    <input type="text" id="convidadoNome" maxlength="50" required>
+                </div>
+
+                <div class="group-input" name="email">
+                    <label for="convidadoEmail">Email:</label>
+                    <input type="email" id="convidadoEmail" maxlength="100" required data-toggle="tooltip" data-placement="right" title="Campo Email: inválido">
+                </div>
+                
+              </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="enviarReserva" class="btn btn-primary" onclick=sendEscolhaPresente()>Enviar</button>
+              <!-- Adicione mais botões conforme necessário -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="group-alert">
+
+      </div>
+
+      <div class="loadingGroup" id="overlay">
+        <div class="overlay">
+            <div class="spinner"></div>
+        </div>
+      </div>
+        
+    <script src="/files/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
