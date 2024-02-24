@@ -60,7 +60,6 @@ responseData.forEach(element => {
       
       <div class="info-box">
           <title class="gift-title">${nomePresente}</title>
-          <a class="gift-link" target="_blank" href="${linkPresente}">Sugestão de Compra</a>
       </div>
       <div class="button-box">
           <button class="gift-button confirm" id="escolherButton" onclick=modalReserva(${idPresente})>Escolher presente</button>
