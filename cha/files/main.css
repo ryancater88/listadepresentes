@@ -6,7 +6,6 @@
     position: relative;
     width: 100%;
     z-index: 0;
-    bottom: 100%;
     padding-top: 10px;
     padding-bottom: 1px;
 }
@@ -17,7 +16,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff2c15c;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 h1{
@@ -32,7 +32,7 @@ h2{
 
 h3{
     font-family: 'Great Vibes';
-    font-size: 200%;
+    font-size: 100%;
     color: #856d08;
     margin: 0
 }
@@ -40,7 +40,7 @@ h3{
 #mensagem-inicial{
     font-family: 'Great Vibes';
     text-align: center;
-    font-size: 130%;
+    font-size: 98%;
     color: #856d08;
     margin: 0;
 }   
@@ -48,7 +48,7 @@ h3{
 .gift-container {
     max-width: 500px;
     width: 90%;
-    height: 600px;
+    height: 80%;
     margin: 20px auto;
     background-color: white;
     border-radius: 8px;
@@ -63,18 +63,17 @@ h3{
 .header-container{
     margin-top: 10px;
     width: 90%;
+    height: 10%;
     display: flex;
-    align-content: center;
-    align-items: center;
     flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     margin-bottom: 10px;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 .gift-list{
     width: 90%;
-    height: 75%;
+    height: 80%;
     border: solid 1px;
     border-color: #856d08a1;
     border-radius: 7px;
